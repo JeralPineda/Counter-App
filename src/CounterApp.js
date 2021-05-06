@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const CounterApp = ({ value = 0 }) => {
-   const [counter, setCounter] = useState(0); //Retorna un arreglo con 2 valores
+const CounterApp = ({ value = 10 }) => {
+   const [counter, setCounter] = useState(value); //Retorna un arreglo con 2 valores
 
    // handleAdd
    const handleAdd = (e) => {
@@ -33,7 +33,7 @@ const CounterApp = ({ value = 0 }) => {
 };
 
 CounterApp.propTypes = {
-   value: PropTypes.number.isRequired,
+   value: PropTypes.number,
 };
 
 export default CounterApp;
